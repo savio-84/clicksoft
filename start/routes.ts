@@ -21,6 +21,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.group(() => {
+  Route.get('potato/:id', 'PotatoesController.default');
   Route.resource('students', 'StudentsController').apiOnly()
   Route.resource('teachers', 'TeachersController').apiOnly()
   Route.resource('rooms', 'RoomsController').apiOnly().except(["store"])
